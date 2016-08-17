@@ -58,6 +58,8 @@
     <Content Include="app\EditProfileFiles\Original\GravatarUrlBuilder.js" />
     <Content Include="app\EventDetails.html" />
     <Content Include="app\favicon.ico" />
+    <Content Include="app\js\controllers\EditEventController.js" />
+    <Content Include="app\NewEvent.html" />
     <Content Include="app\img\angularjs-logo.png" />
     <Content Include="app\img\glyphicons-halflings-white.png" />
     <Content Include="app\img\glyphicons-halflings.png" />
