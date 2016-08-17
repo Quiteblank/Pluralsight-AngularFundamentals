@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{675E2A0B-41BD-47AB-8416-49DEBE49C5E3}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AngularDemoApp</RootNamespace>
+    <AssemblyName>AngularDemoApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="app\web.config" />
+    <None Include="app\data\event\1.json" />
+    <None Include="app\data\event\2.json" />
+    <None Include="app\data\event\3.json" />
+    <None Include="app\data\event\4.json" />
+    <None Include="package.json" />
+    <None Include="README.md" />
+    <None Include="server.bat" />
+    <None Include="server.sh" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app\css\app.css" />
+    <Content Include="app\css\bootstrap.min.css" />
+    <Content Include="app\datepickerDirectiveFiles\app.css" />
+    <Content Include="app\datepickerDirectiveFiles\calendarHelper.js" />
+    <Content Include="app\datepickerDirectiveFiles\datepicker.html" />
+    <Content Include="app\datepickerDirectiveFiles\datepicker.js" />
+    <Content Include="app\EditProfileFiles\Finished\EditProfile.html" />
+    <Content Include="app\EditProfileFiles\Finished\EditProfileController.js" />
+    <Content Include="app\EditProfileFiles\Finished\GravatarUrlBuilder.js" />
+    <Content Include="app\EditProfileFiles\Original\EditProfile.html" />
+    <Content Include="app\EditProfileFiles\Original\EditProfileController.js" />
+    <Content Include="app\EditProfileFiles\Original\GravatarUrlBuilder.js" />
+    <Content Include="app\EventDetails.html" />
+    <Content Include="app\favicon.ico" />
+    <Content Include="app\img\angularjs-logo.png" />
+    <Content Include="app\img\glyphicons-halflings-white.png" />
+    <Content Include="app\img\glyphicons-halflings.png" />
+    <Content Include="app\img\profile.jpg" />
+    <Content Include="app\js\app.js" />
+    <Content Include="app\js\controllers\EventController.js" />
+    <Content Include="app\js\directives.js" />
+    <Content Include="app\js\filters.js" />
+    <Content Include="app\lib\angular\angular-resource.js" />
+    <Content Include="app\lib\angular\angular-resource.min.js" />
+    <Content Include="app\lib\angular\angular-route.js" />
+    <Content Include="app\lib\angular\angular-route.min.js" />
+    <Content Include="app\lib\angular\angular-sanitize.js" />
+    <Content Include="app\lib\angular\angular-sanitize.min.js" />
+    <Content Include="app\lib\angular\angular.js" />
+    <Content Include="app\lib\angular\angular.min.js" />
+    <Content Include="app\lib\bootstrap.js" />
+    <Content Include="app\lib\bootstrap.min.js" />
+    <Content Include="app\lib\jquery.min.js" />
+    <Content Include="app\lib\underscore-1.4.4.min.js" />
+    <Content Include="scripts\web-server.js" />
+    <Content Include="test\karma.conf.js" />
+    <Content Include="test\lib\angular-mocks.js" />
+    <Content Include="test\lib\sinon-1.15.0.js" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\js\services\" />
+    <Folder Include="test\e2e\" />
+    <Folder Include="test\unit\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

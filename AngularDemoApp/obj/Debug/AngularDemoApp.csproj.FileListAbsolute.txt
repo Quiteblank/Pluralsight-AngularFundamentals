@@ -1,0 +1,3 @@
+C:\Users\JEWallace\Desktop\Stuff\Code\AngularJS\DemoApp\AngularDemoApp\AngularDemoApp\bin\Debug\AngularDemoApp.exe.config
+C:\Users\JEWallace\Desktop\Stuff\Code\AngularJS\AngularDemoApp\AngularDemoApp\bin\Debug\AngularDemoApp.exe.config
+C:\Users\JEWallace\Desktop\Stuff\Code\AngularJS\AngularDemoApp\AngularDemoApp\obj\Debug\AngularDemoApp.csprojResolveAssemblyReference.cache
