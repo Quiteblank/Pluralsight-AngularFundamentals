@@ -80,3 +80,8 @@ select, textarea {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+input.ng-invalid.ng-dirty {
+    background-color: pink;
+
+}

@@ -50,6 +50,7 @@
     <Content Include="app\datepickerDirectiveFiles\calendarHelper.js" />
     <Content Include="app\datepickerDirectiveFiles\datepicker.html" />
     <Content Include="app\datepickerDirectiveFiles\datepicker.js" />
+    <Content Include="app\EditProfile.html" />
     <Content Include="app\EditProfileFiles\Finished\EditProfile.html" />
     <Content Include="app\EditProfileFiles\Finished\EditProfileController.js" />
     <Content Include="app\EditProfileFiles\Finished\GravatarUrlBuilder.js" />
@@ -59,6 +60,9 @@
     <Content Include="app\EventDetails.html" />
     <Content Include="app\favicon.ico" />
     <Content Include="app\js\controllers\EditEventController.js" />
+    <Content Include="app\js\controllers\EditProfileController.js" />
+    <Content Include="app\js\services\EventData.js" />
+    <Content Include="app\js\services\GravatarUrlBuilder.js" />
     <Content Include="app\NewEvent.html" />
     <Content Include="app\img\angularjs-logo.png" />
     <Content Include="app\img\glyphicons-halflings-white.png" />
@@ -86,7 +90,6 @@
     <Content Include="test\lib\sinon-1.15.0.js" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\js\services\" />
     <Folder Include="test\e2e\" />
     <Folder Include="test\unit\" />
   </ItemGroup>

@@ -1,51 +1,25 @@
 ﻿'use strict';
 
 eventsApp.controller('EventController',
-    function EventController($scope) {
-
-        //$scope.snippet = '<span style="color:red">hi there</span>';
-        //$scope.boolValue = true;
-        //$scope.mystyle = { color: 'red' };
-        $scope.query = '';
+    function EventController($scope, $log, eventData) {
         $scope.sortOrder = 'name';
-        $scope.event = {
-            name: 'Angular Boot Camp',
-            date: 1234567890123,
-            time: '10:30 am',
-            price: 50,
-            location: {
-                address: 'Google Headquarters',
-                city: 'Mountain View',
-                province: 'CA'
-            },
-            imageUrl: '/img/angularjs-logo.png',
-            sessions: [
-                {
-                    name: 'Directives Masterclass',
-                    creatorName: 'Bob Smith',
-                    duration: 1,
-                    level: 'Advanced',
-                    abstract: 'In this session you will learn the ins and outs of directives!',
-                    upVoteCount: 0
-                },
-                {
-                    name: 'Scopes for fun and profit',
-                    creatorName: 'John Doe',
-                    duration: 2,
-                    level: 'Introductory',
-                    abstract: 'This will take a closer look at scopes. Learn what they do, how they do it, and how to get them to do it for you.',
-                    upVoteCount: 0
-                },
-                {
-                    name: 'Well Behaved Controllers',
-                    creatorName: 'Jane Done',
-                    duration: 4,
-                    level: 'Intermediate',
-                    abstract: 'Controllers are the beginning of everything Angular does. Learn how to craft controllers that will win the respect of your friends and neighbors.',
-                    upVoteCount: 0
-                }
-            ]
-        }
+
+        // Promise on the $resouce service output (from the EventData service)
+        eventData.getEvent()
+            .$promise
+            .then(function (event) { $scope.event = event; console.log(event); })
+            .catch(function (response) { console.log(response); }
+        );
+
+        // Binding directly to the $resouce service from the EventData service
+        //$scope.event = eventData.getEvent();
+
+        // Returning a function from the $http call from the EventData service
+        //eventData.getEventHttp()
+        //    .success(function (event) { $scope.event = event; })
+        //    .error(function (data, status, headers, config) {
+        //        $log.warn(data, status, headers(), config);
+        //    });
 
         $scope.upVoteSession = function (session) {
             session.upVoteCount++;

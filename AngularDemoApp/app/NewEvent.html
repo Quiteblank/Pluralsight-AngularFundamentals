@@ -11,6 +11,9 @@
         <div class="navbar">
             <div class="navbar-inner">
                 <ul class="nav">
+                    <li><a href="EventDetails.html">Event Details</a></li>
+                </ul>
+                <ul class="nav">
                     <li><a href="NewEvent.html">Create Event</a></li>
                 </ul>
             </div>
@@ -22,13 +25,13 @@
                     <span ng-bind="event.name | uppercase"></span>
                 </h1>
                 <hr />
-                <form>
+                <form name="newEventForm">
                     <fieldset>
                         <label for="eventName">Event Name:</label>
-                        <input id="eventName" type="text" ng-model="event.name" placeholder="Name of your event..." />
+                        <input id="eventName" type="text" required ng-model="event.name" placeholder="Name of your event..." />
 
                         <label for="eventDate">Event Date:</label>
-                        <input id="eventDate" type="text" ng-model="event.date" placeholder="Format (mm/dd/yyyy)..." />
+                        <input id="eventDate" type="text" required ng-pattern="/\d\d/\d\d/\d\d\d\d/" ng-model="event.date" placeholder="Format (mm/dd/yyyy)..." />
 
                         <label for="eventTime">Event Time:</label>
                         <input id="eventTime" type="text" ng-model="event.time" placeholder="Start and end time..." />
@@ -50,7 +53,7 @@
                     <br />
                     <br />
 
-                    <button type="submit" ng-click="saveEvent(event)" class="btn btn-primary">Save</button>
+                    <button type="submit" ng-disabled="newEventForm.$invalid" ng-click="saveEvent(event, newEventForm)" class="btn btn-primary">Save</button>
                     <button type="button" ng-click="cancelEdit()" class="btn btn-default">Cancel</button>
                 </form>
             </div>
