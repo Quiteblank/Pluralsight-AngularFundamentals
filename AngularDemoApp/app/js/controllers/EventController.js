@@ -1,15 +1,14 @@
 ﻿'use strict';
 
 eventsApp.controller('EventController',
-    function EventController($scope, $log, eventData) {
+    function EventController($scope, $log, $anchorScroll, eventData) {
         $scope.sortOrder = 'name';
 
         // Promise on the $resouce service output (from the EventData service)
         eventData.getEvent()
             .$promise
             .then(function (event) { $scope.event = event; console.log(event); })
-            .catch(function (response) { console.log(response); }
-        );
+            .catch(function (response) { console.log(response); });
 
         // Binding directly to the $resouce service from the EventData service
         //$scope.event = eventData.getEvent();
@@ -27,6 +26,10 @@ eventsApp.controller('EventController',
 
         $scope.downVoteSession = function (session) {
             session.upVoteCount--;
+        }
+
+        $scope.scrollToSession = function () {
+            $anchorScroll();
         }
     }
 );
