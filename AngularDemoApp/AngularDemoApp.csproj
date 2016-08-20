@@ -44,6 +44,8 @@
     <None Include="server.sh" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\CompileSample.html" />
+    <Content Include="app\CacheSample.html" />
     <Content Include="app\css\app.css" />
     <Content Include="app\css\bootstrap.min.css" />
     <Content Include="app\datepickerDirectiveFiles\app.css" />
@@ -59,10 +61,13 @@
     <Content Include="app\EditProfileFiles\Original\GravatarUrlBuilder.js" />
     <Content Include="app\EventDetails.html" />
     <Content Include="app\favicon.ico" />
+    <Content Include="app\js\controllers\CompileSampleController.js" />
+    <Content Include="app\js\controllers\CacheSampleController.js" />
     <Content Include="app\js\controllers\EditEventController.js" />
     <Content Include="app\js\controllers\EditProfileController.js" />
     <Content Include="app\js\services\EventData.js" />
     <Content Include="app\js\services\GravatarUrlBuilder.js" />
+    <Content Include="app\js\services\MyCache.js" />
     <Content Include="app\NewEvent.html" />
     <Content Include="app\img\angularjs-logo.png" />
     <Content Include="app\img\glyphicons-halflings-white.png" />
